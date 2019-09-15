@@ -123,3 +123,9 @@ mark,
     content: "\2014\00A0"; // em dash, nbsp
   }
 }
+
+p{
+  line-height: 1.67;
+// Text style for "Lorem ipsu"
+letter-spacing: rem(-0.18px);
+}

@@ -1,0 +1,39 @@
+mixin s-gal()
+	// start s-gal
+	+b.SECTION.s-gal.section.lazy-background#s-gal&attributes(attributes)
+		+e.head.container
+			+b.section-title
+				+e.H2.sm НАШИ РАБОТЫ
+				+e.lg  НАШИ РАБОТЫ
+			
+			.row
+				.col
+					.title Мы рады показать Вам наши работы
+						span.text-primary .
+				.col-sm-auto
+					+e.btn.link-more(href='#') Все работы
+						+icon("arrow-long-right")
+		+e.body.container
+			+e.slider--js 
+				mixin slide(i, t, t2, t3)
+					+e.slide
+						+e.item.bg-wrap
+							picture.picture-bg
+								img.object-fit-js(src="#" data-lazy=`img/@2x/gal-${i}.jpg` alt="" )
+							+e.title= t
+							+e.type
+								strong= t2 
+								| 
+								+e.SPAN.city /
+									= t3
+									|/
+							block
+							+e.link-more(href="#") Узнать больше
+					// /+e.slide.bg-wrap
+				- for (var x = 0; x < 3; x++)
+					+slide("1","Раздвижные порталы","ЧАСТНЫЙ КОТТЕДЖ","Всеволожск") 
+					+slide("2","Складные порталы","ЗАГОРОДНЫЙ КЛУБ","Комарово") 
+					+slide("3","Фасадное остекление","СПОРТИВНЫЙ ЦЕНТР","Сосновый Бор") 
+					+slide("4","Зимний сад","ЧАСТНЫЙ КОТТЕДЖ","Рощино")
+			 
+	// end s-gal

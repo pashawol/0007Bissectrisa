@@ -1,0 +1,27 @@
+mixin s-logos()
+	// start s-logos
+	+b.SECTION.s-logos.section.lazy-background#s-logos&attributes(attributes)
+		.container
+			.row
+				+e.text-col.col-xxl-4.col-lg-5
+
+					+b.section-title
+						+e.H2.sm НАШИ ПАРТНЕРЫ
+						+e.lg  НАШИ ПАРТНЕРЫ
+					.title Мы&nbsp;сотрудничаем  с&nbsp;лучшими, чтобы быть лучше для Вас
+						span.text-primary .
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+				+e.right-col.col
+					mixin gr(t, ...items)
+						+e.group
+							+e.group-title= t
+							.row
+								each item in items
+									+e.item.col
+										+e.img-wrap
+											+pic(`logo-`+ item,'jpg','','lazy',0)
+					+gr('ПРОФИЛИ',"1","2","3","4","5")
+					+gr('ФУРНИТУРА',"6","7","8")
+					+gr('СТЕКЛО И СТЕКЛОПАКЕТЫ',"9","10","11")
+				
+	// end s-logos

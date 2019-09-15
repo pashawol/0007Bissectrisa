@@ -1,0 +1,138 @@
+.s-logos {
+	.title{
+		max-width: rem(430);
+		color: #ffffff;
+	}
+	@include media-breakpoint-up(xl) {
+
+		padding-top: rem(295);
+	}
+	padding-top: rem(205);
+	// padding-top: rem(100);
+	.container{
+		position: relative;
+		z-index: 2;
+	}
+	.section-title{
+		&__sm{
+			// padding-top: rem(20);
+		}
+		&__lg{
+			top: rem(-130);
+			left: rem(-20);
+			z-index: -2;
+		}
+	}
+	&__text-col{
+		@include media-breakpoint-up(xxl) {
+
+			padding-left: rem(80);
+		}
+		position: relative;
+		z-index: 2;
+		color: #ffffff;
+		padding-bottom: rem(12);
+		@include media-breakpoint-up(lg) { 
+			padding-bottom: 0;
+		}
+		padding-bottom: rem(70); 
+		&::before{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			width: rem(885px);
+			@include media-breakpoint-up(xxl) {
+
+				left: 15px;
+			}
+			left: -15px;
+			top: rem(-35);
+			@include media-breakpoint-up(lg) {
+
+				height: 90%;
+				padding-bottom: 0;
+			}
+			padding-bottom: rem(70);
+			height: 100%;
+			background-color: $dark;
+		}
+
+
+		@include media-breakpoint-up(xxxl) {
+
+			flex: 0 0 32%;
+			max-width: 32%;
+		}
+	}
+	&__right-col{
+		position: relative;
+		z-index: 5;
+	}
+	&__group{}
+	&__group-title{
+		@include media-breakpoint-up(lg) {
+
+			color: #e7e7e7;  
+		}
+		font-weight: 500;
+		line-height: 1.67;
+		// Text style for "ПРОФИЛИ"
+		letter-spacing: rem(-0.18px);
+		padding-bottom: rem(7);
+	}
+	&__img-wrap{
+			background-color: #e7e7e7;
+			height: rem(155);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			padding: rem(15);
+			// picture{
+
+
+			// }
+	}
+	&__item{
+		padding-bottom: 20px;
+		@include media-breakpoint-up(xxl) {
+
+			max-width: (100% / 5);
+			flex: 0 0 (100% / 5);
+		}
+		@include media-breakpoint-up(sm) {
+
+			max-width: (100% / 3);
+			flex: 0 0 (100% / 3);
+		}
+		max-width: (100% / 2);
+		flex: 0 0 (100% / 2);
+	
+	}
+
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

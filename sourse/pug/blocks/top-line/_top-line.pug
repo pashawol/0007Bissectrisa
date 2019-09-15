@@ -2,5 +2,13 @@ mixin top-line()
 	// start .top-line
 	+b.top-line.block-with-lazy
 		.container
-			.row top-line
+			.row
+				mixin item(t,i)
+					.col-auto
+						+e.lang(href="#")&attributes(attributes)= t
+							img.res-i(src=`img/@2x/lang-${i}.png`, alt="")
+				+item("FRA","1")
+				+item("GER","2")
+				+item("ENG","3")
+				+item("RUS","4")(class="active")
 	// end .top-line

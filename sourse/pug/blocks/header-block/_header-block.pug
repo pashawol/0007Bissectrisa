@@ -2,6 +2,38 @@ mixin header-block()
 	// start header-block
 	+b.header-block#header-block
 		.container
-			h1 header-block
-			.row
+			.row.no-gutters
+				
+				+e.left-col.col-auto
+					+e.UL.nav
+						+e.LI.item
+							+e.link(href="#") АЛЮМИНИЕВЫЕ ОКНА&nbsp;И&nbsp;ДВЕРИ
+						-
+							var list = ["РАЗДВИЖНЫЕ ПОРТАЛЫ","СКЛАДНЫЕ ПОРТАЛЫ","АЛЮМИНИЕВЫЕ ВИТРАЖИ","ЗИМНИЕ САДЫ","БЕЗРАМНОЕ ОСТЕКЛЕНИЕ","ПОДЪЕМНЫЕ ПАНОРАМНЫЕ ОКНА","ЭКСКЛЮЗИВ","АВТОМАТИКА"]
+						each item in list
+							+e.LI.item
+								+e.link(href="#")= item
+					+e.control-wrap
+				+e.col.col
+					+e.slider--js
+						- for (var x = 1; x < 4; x++)
+							mixin slide()
+								+e.slide.bg-wrap
+									block
+									+e.caption
+										+e.top-text Наши работы
+										+e.title.text-white РАЗДВИЖНЫЕ ПОРТАЛЫ 
+										+e.H2.sm 
+											span.text-white ЧАСТНЫЙ КОТТЕДЖ 
+											|
+											|    /ЗЕЛЕНОГОРСК/
+										+e.link-more.link-more(href="#") Узнать больше
+											+icon("arrow-long-right")
+							if x== 1
+								+slide()
+									img(src=`img/@2x/header-slide-${x}.jpg`, alt="")
+							else
+								+slide()
+									img(src="#" data-lazy=`img/@2x/header-slide-${x}.jpg`, alt="")
+			+e.dots-wrap
 	// end header-block

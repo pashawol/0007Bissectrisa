@@ -1,6 +1,5 @@
 
 
-@include font-face ("roboto", "../fonts/Roboto-Regular/Roboto-Regular", $file-formats: woff2 woff ttf);
-@include font-face ("roboto", "../fonts/Roboto-Bold/Roboto-Bold", bold, $file-formats: woff2 woff ttf);
-@include font-face ("roboto", "../fonts/Roboto-Medium/Roboto-Medium", 500, $file-formats: woff2 woff ttf);
-@include font-face ("roboto", "../fonts/Roboto-Black/Roboto-Black", 900, $file-formats: woff2 woff ttf);
+@include font-face ("DINPro", "../fonts/DINPro-Regular", $file-formats: woff2 );
+@include font-face ("DINPro", "../fonts/DINPro-Bold", bold, $file-formats: woff2 );
+@include font-face ("DINPro", "../fonts/DINPro-Medium", 500, $file-formats: woff2 );

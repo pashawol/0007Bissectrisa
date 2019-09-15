@@ -3,13 +3,14 @@ mixin form-head()
 		input(type='hidden', class="order", name='order', value=`Заявка  с сайта` ) 
 		block
 
-mixin input(placeholder,  t='text', label, name= t)
+mixin input(i,placeholder,  t='text', label, name= t)
 	mixin t(t='text',placeholder, name= t)
 		if t== "textarea"
 			+e.TEXTAREA.input.form-control(placeholder= placeholder name= name)&attributes(attributes)
 		else
 			+e.INPUT.input(type= t placeholder= placeholder name= name)&attributes(attributes)
 	+e.input-wrap
+		img.res-i(src=`img/svg/${i}.svg`, alt="")
 		if label
 			label
 				+e.SPAN.title= label
@@ -18,7 +19,13 @@ mixin input(placeholder,  t='text', label, name= t)
 			+t(t,placeholder, name)&attributes(attributes)
 	// +e.input-wrap
 
+mixin select(i, placeholder, name=null)
+	+e.input-wrap
+		img.res-i(src=`img/svg/${i}.svg`, alt="")
+		+e.SELECT.input( name= name)&attributes(attributes)
 
+			option= placeholder
+			block
 //- wrapper for form
 mixin form-wrap()
 	+b.form-wrap&attributes(attributes)
@@ -39,9 +46,10 @@ mixin in-c(typ="checkbox", text, name= typ )
 mixin add-file(n)
 	+b.add-file
 		label
+			img.res-i(src=`img/svg/add.svg`, alt="")
 			+e.INPUT.input(name='file', type='file')
 			+e.SPAN.btn 
-			+e.SPAN.text   Прикрепить резюме
+			+e.SPAN.text   Прикрепить файл к сообщению
 		+e.SPAN.filename 
 
 

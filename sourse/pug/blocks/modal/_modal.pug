@@ -31,16 +31,57 @@ mixin modal()
 	//- 			br
 	//- 			.h3 Скоро с Вами свяжутся
 	//- 			br 
+	.d-none
+		+form-wrap()(id="modal-call" class="  modal-win modal-form" )
+			+e.head
+				+e.head-title
+					img.res-i(src="img/svg/call.svg", alt="")
+					span ОБРАТНЫЙ ЗВОНОК
+			+e.body
+				+input("user","Ваше имя")(required) 
+				+input("tel-2","Ваш контактный телефон","tel")(required)
+				+select("clock","Прямо сейчас")
+					option(value="#")  Прямо сейчас 1
+					option(value="#")  Прямо сейчас 2
+					option(value="#")  Прямо сейчас 3
 
-	+form-wrap()(id="modal-call" class="zoom-anim-dialog mfp-hide modal-win modal-form" )
-		.text-center
-			+e.title.h3.ttu Обратный звонок
-			p Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут
-		+input("text","Ваше Имя")(required) 
-		+input("tel","Ваш телефон")(required)
-		//- +input("email","Ваше email")(required)
-		//- +text( "Комментарий")
-		+e.INPUT.btn.btn.btn-block.btn-warning.mb-4(type="submit" value="Рассчитать") 
-		+polite()
-	// #modal-call
+				//- +input("email","Ваше email")(required)
+				//- +text( "Комментарий")
+				+e.btn.link-more.btn-secondary(type="submit") Отправить
+					+icon("arrow-long-right")
+		// #modal-call
+		
+		+form-wrap()(id="modal-measure" class="  modal-win modal-form" )
+			+e.head
+				+e.head-title
+					img.res-i(src="img/svg/order.svg", alt="")
+					span ЗАЯВКА НА ЗАМЕР
+			+e.body
+				+input("user","Ваше имя")(required) 
+				+input("tel-2","Ваш контактный телефон","tel")(required)
+				+input("map","Адрес объекта для замера","textarea")(required)  
+
+				//- +input("email","Ваше email")(required)
+				//- +text( "Комментарий")
+				+e.btn.link-more.btn-secondary(type="submit") Отправить
+					+icon("arrow-long-right")
+		// #modal-measure
+		
+		+form-wrap()(id="modal-calc" class="  modal-win modal-form" )
+			+e.head
+				+e.head-title
+					img.res-i(src="img/svg/calculator.svg", alt="") 
+					span ПОЛУЧИТЬ РАСЧЕТ
+			+e.body
+				+input("user","Ваше имя")(required) 
+				+input("tel-2","Ваш контактный телефон","tel")(required)
+				+input("mail","Ваш Email","email")(required)
+				+input("text","Информация для расчета","textarea")(required)  
+				+add-file(n)
+				//- +input("email","Ваше email")(required)
+				//- +text( "Комментарий")
+				+e.btn.link-more.btn-secondary(type="submit") Отправить
+					+icon("arrow-long-right")
+		// #modal-calc
+
 	// modal

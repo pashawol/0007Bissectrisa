@@ -1,6 +1,30 @@
 .top-line {
+  background-color: $dark;
+  .row{
+    justify-content: flex-end;
+  }
+  &__lang{
+    font-size: rem(13px);
+    font-weight: 500;
+    line-height: 1.08;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    color: #ffffff !important;
+    margin-top: rem(6);
+    margin-bottom: rem(6);
+    text-decoration: none !important;
+    img{
+      margin-left: rem(5);
+      flex-shrink: 0;
 
-	
+    }
+    opacity: 0.5;
+    &:hover,
+    &.active{
+      opacity: 1;
+    }
+  }
 // 
 @include media-breakpoint-up(xl) {}
 

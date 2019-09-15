@@ -1,0 +1,146 @@
+.s-gal {
+	&__head{
+		padding-bottom: rem(55);
+		@include media-breakpoint-up(xxxl) {
+			max-width: rem(1645 + 30);
+		}
+		.row{
+			align-items: center;
+		}
+		position: relative;
+	}
+	.section-title{
+		padding-bottom: rem(32);
+		margin-bottom: rem(0);
+		&__lg{
+			top: em(8);
+			// bottom: 0;
+			right: -4%;
+		}
+	}
+	&__btn{
+
+		@extend .btn;
+		@extend .btn-secondary;
+		width: rem(165);
+	}
+	@include media-breakpoint-up(sm) {
+
+		h2{
+			margin-bottom: 0;
+		}
+	}
+		 
+
+	.slick-arrow{ 
+		&.l{ 
+				@include media-breakpoint-up(xxl) {
+
+					left: rem(55);
+				}
+				left: rem(35);
+		}
+		&.r{
+				@include media-breakpoint-up(xxl) {
+
+					right: rem(55);
+				}
+				right: rem(35);
+		} 
+	}
+	&__slider{
+		// padding-left: rem(52 /2);
+		// padding-right: rem(52 /2);
+		@include media-breakpoint-up(xxxl) {
+
+			margin-left: rem(-52 /2);
+			margin-right: rem(-52 /2);
+		}
+		@include media-breakpoint-up(sm) {
+
+			margin-left: rem(-15);
+			margin-right: rem(-15);
+		}
+	}
+	&__slide{
+		@include media-breakpoint-up(xxxl) {
+
+			padding-left: rem(52 /2);
+			padding-right: rem(52 /2);
+		}
+		@include media-breakpoint-up(sm) {
+
+			padding-left: rem(15);
+			padding-right: rem(15);
+		}
+	}
+	&__item{
+		@include media-breakpoint-up(xxxl){
+
+		}
+		height: rem(577);
+		// height: rem(477);
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		color: #ffffff;
+		@include media-breakpoint-up(xxxl){
+
+			padding: rem(38) rem(38) rem(30);
+		}
+		@include media-breakpoint-up(sm) {
+
+		}
+		padding: rem(38) rem(20) rem(30);
+	}
+	&__title{
+		@extend .h4;
+		letter-spacing: rem(-1.05px);
+		margin-bottom: rem(5);
+	}
+	&__city{
+		font-size: rem(14px);
+		font-weight: 700;
+		letter-spacing: rem(-0.14px); 
+	}
+	&__link-more{
+			font-weight: bold;
+			opacity: 0.7;
+			color: #ffffff !important;
+			display: inline-block;
+			margin-top: rem(15);
+			@include mt;
+			text-decoration: none !important;
+			&:hover{
+				opacity: 1;
+			}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {
+		.slick-arrow{
+			display: none !important;
+		}
+	}
+	@include media-breakpoint-down(xs) {} 
+
+}

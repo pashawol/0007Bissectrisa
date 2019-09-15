@@ -1,0 +1,206 @@
+.s-rews {
+	&__head{
+		position: relative;
+		// padding-bottom: rem(20);
+			@include media-breakpoint-up(xxxl) {
+				max-width: 1670px;
+			}
+	}
+	.title{
+		padding-bottom: 0;
+		margin-bottom: rem(40);
+	}
+	.section-title{
+		&__sm{
+
+		}
+		&__lg{
+			z-index: -1;
+			top: em(5);
+			right: 14%;
+		}
+		// margin-bottom: 0;
+		padding-bottom: rem(27);
+	}
+	&__body{
+		background-color: #2d2d2d;
+	}
+	&__title{
+		@extend .h4;
+		// opacity: 0.7;
+		color: #828282;
+		letter-spacing: rem(-1.05px);
+	}
+
+	&__slider-wrap{
+
+		margin-left: auto;
+		margin-right: auto;
+		max-width: rem(1460 );
+		// padding-bottom: rem(10);
+	}
+	&__slider{
+		@include media-breakpoint-up(xl) {
+
+			&::before,
+			&::after{
+				content: '';
+				position: absolute;
+				height: 100%;
+				width: 50px;
+				background-color: #2d2d2d;
+				z-index: 2;
+				top: 0;
+				
+			}
+		}
+		&::before{
+			right: 97%;
+		}
+		
+		&::after{ 
+			left: 97%; 
+		}
+
+		// margin-left: rem(-15);
+		// margin-right: rem(-15);
+
+	}
+	&__head-slide{
+		margin-left: rem(30);
+		padding-right: rem(30);
+		padding-top: rem(45);
+		position: relative;
+	
+	}
+	&__caption{
+		padding: rem(20) rem(30);
+		p{
+			font-size: $em-base;
+font-weight: 400;
+line-height: 1.44;
+// Text style for "Очень дово"
+letter-spacing: rem(-0.18px);
+margin-bottom: 0;
+		}
+	}
+	&__slide{
+		@include media-breakpoint-up(xxl) {
+
+			padding: 0 rem(20) rem(45);
+		}
+		padding: 0 rem(0) rem(45);
+		position: relative;
+		
+	}
+	.icon{
+		font-size: $small;
+		&-star{
+			color: #696e72;
+			&-active{
+				color: $primary;
+			}
+		}
+	}
+	.star-active{
+			color: $primary;
+		
+	}
+	&__title{
+		@extend .h4;
+		line-height: 1.6;
+		// Text style for "Ирина П."
+		letter-spacing: rem(-1.05px);
+		margin-bottom: 0;
+	}
+	&__head-slide{
+		padding-bottom: rem(30);
+		.row{
+			align-items: center;
+		}
+	}
+	.slick-current,
+	.slick-center{
+		.s-rews{
+			&__head-slide{
+				&::before{
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: rem(105px);
+					height: rem(4px);
+					background-color: $primary;
+					@include mt;
+				}
+			}
+			&__title{
+				color: #ffffff;
+			}
+			&__caption{
+				@include mt;
+				background-color: #000000;
+				position: relative;
+				line-height: 1.44;
+// Text style for "Очень дово"
+letter-spacing: -0.18px;
+color: #ffffff;
+				&::before{
+					content: '';
+					position: absolute;
+					left: rem(30);
+					bottom: 99%;
+					@include triangle(rem(30), #000, down-left);
+				}
+			}
+		}
+	}
+	.slick-arrow{
+		background-color: #000000;
+		z-index: 4;
+		@include media-breakpoint-up(xxl){
+			&.l{
+
+				left: rem(-120) ;
+			}
+			
+			&.r{
+
+				right: rem(-120) ;
+			}
+
+		}
+		svg{
+			path{
+				fill: #ffffff;
+			}
+		}
+	}
+		 
+	@include media-breakpoint-up(xl) {
+		padding-top: rem(55);
+	}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

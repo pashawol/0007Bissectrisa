@@ -1,7 +1,208 @@
 .header-block {
-	display: block;
- 
-	
+	padding-bottom: rem(60);
+	//  margin-left: auto;
+	//  margin-right: auto;
+	//  max-width: 1920px;
+	// display: flex;
+	// .row{
+	// 	ale
+	// }
+	&__left-col{
+		align-self: flex-end;
+		z-index: 4;
+	}
+	&__control-wrap{
+		width: rem(134);
+		@include media-breakpoint-up(xl) {
+			position: relative;
+			display: block;
+		}
+		display: none;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		background-color: #fff;
+		height: rem(57);
+		.slick-arrow{ 
+			width: 50%;
+			height: 100%;
+			line-height: rem(57);  
+			&.l{ 
+				left: 0;
+				padding-left: rem(15);
+			}
+			&.r{
+			right: 0;
+			padding-right: rem(14);
+			text-align: right;
+			} 
+		}
+	}
+	&__slider{
+		// flex-grow: 1;
+		margin-right: calc((100% - 100vw) / 2 );
+		height: 100%;
+		display: flex;
+		@include media-breakpoint-up(sm) {
+			margin-left: 0;
+		}
+		margin-left: -15px;
+
+	}
+	.slick-track{
+		height: 100%;
+		display: flex;
+		width: 100%;
+	}
+	.slick-list{
+		width: 100%;
+		height: 100%;
+		// display: flex;
+	}
+	&__slide{
+		position: relative;
+		z-index: 2;
+		@include media-breakpoint-up(xl) {
+			&::before{
+
+				padding-bottom: (730/1719 *100%);
+			}
+		}
+		
+		@include media-breakpoint-up(md) {
+			&::before{
+
+				padding-bottom: (730/1219 *100%);
+			}
+		}
+
+		@include media-breakpoint-up(sm) {
+				&::before{
+
+					padding-bottom: (740/719 *100%);
+				}
+		} 
+		@include block(619,730);
+		min-height: 100%;
+		
+		img{
+			object-fit: cover;
+			left: 0;
+			top: 0;
+			position: absolute;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			
+		}
+
+		background-color: #2d2d2d;
+	}
+	&__caption{
+		background-color: #2d2d2d;
+		width: rem(584);
+		max-width: 100%;
+		// margin-left: auto;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		font-weight: 500;
+		@include media-breakpoint-up(sm) {
+
+			padding: rem(30) rem(43) rem(40);
+		}
+		padding: rem(20) rem(20) rem(20);
+	}
+	&__top-text{
+		font-size: rem(16);
+		padding-bottom: rem(10);
+	}
+	&__sm{
+font-weight: bold;
+font-size: rem(14);
+padding-bottom: rem(20);
+	}
+	&__title{
+// font-size: ;
+@include rfs(rem(33));
+letter-spacing: rem(-0.33px);
+	}
+
+	&__link-more{
+		@extend .text-secondary;
+		font-size: rem(16);
+		text-decoration: none !important;
+		.icon{
+			// content: url(../img/svg/arrow-right.svg);
+			color: $primary;
+			margin-left: rem(10);
+			@include mt;
+			font-size: rem(12);
+		}
+	}
+	&__col{
+		width: calc(100% - #{rem(134)});
+	}
+	&__nav{
+		width: rem(342);
+		margin-right: rem(-210);
+		background-color: #e7e7e7;
+		list-style-type: none;
+		padding: rem(53) rem(55) rem(22) ;
+		margin-bottom: 0;
+		@include media-breakpoint-up(xl) {
+			display: block;
+		}
+		display: none;
+	}
+			&__item{
+				padding-bottom: rem(10);
+				margin-bottom: rem(10);
+				position: relative;
+				&:not(:last-child)::before{
+						content: '';
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						width: 86px;
+						background-color: #adadad;
+						height: 1px;
+				}
+			}
+			&__link{
+				font-size: rem(19);
+				letter-spacing: -0.19px;
+				line-height: 1.29;
+				color: #4e4e4e;
+				font-weight: 500;
+				text-transform: uppercase;
+				text-decoration: none !important;
+			}
+			.slick-dots{
+				text-align: center;
+				margin-left: rem(-10);
+				margin-right: rem(-10);
+				margin-bottom: 0;
+				padding-top: rem(13);
+				button{
+					display: none;
+				}
+				li{
+					display: inline-block;
+					width: rem(64);
+					height: rem(6);
+					margin-left: rem(10px);
+					margin-right: rem(10px);
+					background-color: #e7e7e7;
+					cursor: pointer;
+					@include mt;
+					&:hover,
+					&.slick-active{
+						background-color: $primary;
+					}
+
+				}
+			}
 	// 
 	@include media-breakpoint-up(xl) {}
 

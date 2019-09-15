@@ -43,6 +43,14 @@
       @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
     }
   }
+
+  .icon{
+    font-size: rem(12);
+    color: $primary;
+    margin-left: rem(10);
+  }
+  font-size: rem(16px);
+font-weight: 500;
 }
 
 // Future-proof disabling of clicks on `<a>` elements
@@ -68,7 +76,9 @@ fieldset:disabled a.btn {
   }
 }
 
-
+.btn-secondary{
+  color: #ffffff !important;
+}
 //
 // Link buttons
 //

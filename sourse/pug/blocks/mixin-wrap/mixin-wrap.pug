@@ -85,16 +85,16 @@ mixin arrow()
 mixin soc()
 	+b.soc
 		mixin item()
-			+e.A.item(href="№" target="_blank")
+			+e.A.item(href="#" target="_blank")
 				block
+		+item()
+			+icon('vk')
+		
 		+item()
 			+icon('fb')
 		
 		+item()
-			+icon('insta')
-		
-		+item()
-			+icon('vk')
+			+icon('inst')
 //- /scial buttons
 //- WP menu
 //- mixin mnu()
@@ -113,9 +113,62 @@ mixin soc()
 //- menu
 mixin mnu()
 	- var nav= {"Продукция ":"#","Услуги  ":"#","Подбор септика   ":"#","Акции ":"#"," О компании  ":"#"," Доставка и оплата ":"#"," Клиентам  ":"#"," Наши работы   ":"#","Контакты ":"#"}
-	+e.UL.nav
-		each linkPatch, linkName in nav
-			+e.LI.item: +e.A.link(href= linkPatch)= linkName
+	+b.main-nav
+		.row
+			mixin col()
+				.col-xl-auto.col-sm-6
+					block
+			+col
+				
+				+e.item
+					+e.A.link--main(href="#") О КОМПАНИИ
+					+e.sub
+						+e.item: +e.A.link--sub(href="#") История
+						+e.item: +e.A.link--sub(href="#") Достижения
+						+e.item: +e.A.link--sub(href="#") Наша команда
+						+e.item: +e.A.link--sub(href="#") Производство
+						+e.item: +e.A.link--sub(href="#") Вакансии
+				
+				+e.item: +e.A.link--main(href="#") ШОУ-РУМ 
+			+col
+				+e.item: +e.A.link--main(href="#") НАШИ РАБОТЫ
+				+e.item: +e.A.link--main(href="#") НАШИ ПАРТНЕРЫ
+				+e.item: +e.A.link--main(href="#") ОТЗЫВЫ
+				+e.item: +e.A.link--main(href="#") НОВОСТИ
+				+e.item: +e.A.link--main(href="#") КОНТАКТЫ
+			
+			
+			+col
+				+e.item
+					+e.A.link--main(href="#") ПРОДУКЦИЯ
+
+					+e.sub
+						+e.item: +e.A.link--sub(href="#")  Окна и двери
+						+e.item: +e.A.link--sub(href="#")  Раздвижные порталы
+						+e.item: +e.A.link--sub(href="#")  Складные порталы
+						+e.item: +e.A.link--sub(href="#")  Витражи
+						+e.item: +e.A.link--sub(href="#")  Зимние сады
+						+e.item: +e.A.link--sub(href="#")  Безрамное остекление
+						+e.item: +e.A.link--sub(href="#")  Подъемные
+						+e.item: +e.A.link--sub(href="#")  панорамные окна
+						+e.item: +e.A.link--sub(href="#")  Эксклюзив
+						+e.item: +e.A.link--sub(href="#")  Автоматика
+			+col
+				+e.item
+					+e.A.link--main(href="#") УСЛУГИ
+					+e.sub
+						+e.item: +e.A.link--sub(href="#")  Замер
+						+e.item: +e.A.link--sub(href="#")   Проектирование
+						+e.item: +e.A.link--sub(href="#")   Монтаж
+						+e.item: +e.A.link--sub(href="#")   Гарантия 
+				+e.item
+					+e.A.link--main(href="#") ДЕКОР
+					+e.sub
+						+e.item: +e.A.link--sub(href="#") Покраска
+						+e.item: +e.A.link--sub(href="#") Текстура дерева
+						+e.item: +e.A.link--sub(href="#") Ручки оконные
+						+e.item: +e.A.link--sub(href="#") Ручки дверные
+		
 //- /menu
 
 

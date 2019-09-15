@@ -1,0 +1,23 @@
+mixin s-about()
+	// start s-about
+	+b.SECTION.s-about.section.lazy-background#s-about&attributes(attributes)
+		.container
+			+b.section-title
+				+e.H2.sm О КОМПАНИИ
+				+e.lg  О КОМПАНИИ
+			.row 
+				+e.col.col-lg-auto
+					.title Мы&nbsp;являемся лидером по&nbsp;производству алюминиевых конструкций  на&nbsp;северо-западе
+						span.text-primary .
+					p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean  commodo ligula eget dolor. Aenean massa. Cum sociis natoque  penatibus et&nbsp;magnis dis parturient montes, nascetur ridiculus mus.  Donec quam felis, ultricies nec, pellentesque&nbsp;eu, pretium quis, sem.
+					+e.btn.link-more(href='#') Узнать больше
+						+icon("arrow-long-right")
+
+				.col
+					+pic('about-1')
+					+e.link.fz(href="#")  НАША КОМАНДА
+				+e.last-col.col
+					+pic('about-2')
+					+e.link.fz(href="#")  НАШЕ ПРОИЗВОДСТВО
+						
+	// end s-about

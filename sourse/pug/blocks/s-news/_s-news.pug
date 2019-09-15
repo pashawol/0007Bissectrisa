@@ -1,0 +1,35 @@
+mixin s-news()
+	// start s-news
+	+b.SECTION.s-news.section.lazy-background#s-news&attributes(attributes)
+		.container
+			+b.section-title
+				+e.lg  НОВОСТИ
+		+e.body
+			.container
+				.row
+					+e.col.col-xl-8
+						+e.slider--js
+							mixin slide(i, t, d)
+								+e.slide
+									+e.head-date= d
+									+e.wrap.bg-wrap(href="#")
+										picture.picture-bg
+											img.object-fit-js(src="#" data-lazy=`img/@2x/news-${i}.jpg`  alt="")
+										+e.title= t 
+							+slide("1","Режим работы в Новогодние праздники 2019.",'28 Декабря 2018')
+
+							+slide("2","Утепление фасадного  остекления.",'15 Марта 2019')
+							+slide("2","Утепление фасадного  остекления.",'15 Марта 2019')
+					+e.right-col.col
+						+e.main-news
+							+e.main-news-date 15.03
+							+b.section-title
+								+e.H2.sm НОВОСТИ 
+							.title Утепление фасадного  остекления
+								span.text-primary .
+							p Рады сообщить Вам о том, что теперь в компании  "БИССЕКТРИСА" можно заказать не только окна и двери,  но и замену холодного фасадного утепления на теплое!  Замена холодного алюминиевого фасада на теплое  ПВХ-остекление позволит Вам круглый год наслаждаться  теплом на Вашей лоджии и, в случае необходимости,  объединить ее с комнатой.
+							+e.link-more.link-more(href="#") Узнать больше
+								+icon("arrow-right")
+						+e.btn.link-more(href='#') Все новости
+							+icon("arrow-long-right")
+	// end s-news

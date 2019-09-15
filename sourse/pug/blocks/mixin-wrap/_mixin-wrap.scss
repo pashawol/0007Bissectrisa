@@ -9,14 +9,26 @@
 		vertical-align: middle;
 		@include mt;
 		display: block;
+		color: #4c4c4c !important;
 		&:hover{
-		 	// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
-			opacity: .6 ;
+			// box-shadow: 0 0 33px 0px rgba(255, 83, 0, 0.16);
+			
 		}
 		
 	}
 	.icon{
-	font-size: rem(30);
+		// font-size: rem(30);
+		font-size: rem(18);
+		&-inst{
+			// font-size: rem(18);
+		}
+		&-vk{
+			font-size: rem(12);
+		}
+		
+		&-fb{
+		}
+
 	}
 	 
 
