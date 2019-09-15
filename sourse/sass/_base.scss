@@ -276,6 +276,9 @@ transition: all 0.3s ease-out;
 
 .slick-slider {
 
+	.slick-arrow{
+		opacity: 0;
+	}
 	&:hover{
 		.slick-arrow{
 			opacity: 1;
@@ -291,7 +294,7 @@ transition: all 0.3s ease-out;
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: 2;
-	opacity: 0;
+
 	@include mt;
 	cursor: pointer; 
 		background-color: #fff;
