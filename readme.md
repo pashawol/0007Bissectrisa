@@ -1,1 +1,2 @@
-https://pashawol.github.io/0007Bissectrisa/public/index.html
+<a href="ttps://pashawol.github.io/0007Bissectrisa/public/index.html" target='_blank'> https://pashawol.github.io/0007Bissectrisa/public/index.html</a>
+<a href="https://pashawol.github.io/0007Bissectrisa/public/02-about.html" target='_blank'> https://pashawol.github.io/0007Bissectrisa/public/02-about.html</a>

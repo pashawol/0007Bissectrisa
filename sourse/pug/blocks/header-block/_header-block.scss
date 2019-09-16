@@ -298,7 +298,9 @@ letter-spacing: rem(-0.33px);
 				}
 			}
 
-
+			&--img{
+				padding-bottom: 0;
+			}
 	// 
 	@include media-breakpoint-up(xl) {}
 

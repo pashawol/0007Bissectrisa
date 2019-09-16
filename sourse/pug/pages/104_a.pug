@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-our-work/_s-our-work.pug
+//- include ../blocks/s-history/_s-history.pug
+//- include ../blocks/s-progress/_s-progress.pug
+//- include ../blocks/s-team/_s-team.pug
+//- include ../blocks/s-production/_s-production.pug
+//- include ../blocks/s-vacancy/_s-vacancy.pug 
+//- include ../blocks/s-about/_s-about.pug
+//- include ../blocks/s-gal/_s-gal.pug
+//- include ../blocks/s-logos/_s-logos.pug
+//- include ../blocks/s-rews/_s-rews.pug
+//- include ../blocks/s-news/_s-news.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '104_a'
+	title= title
+
+block pagecontent
+ 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+header-block-body('head-104.jpg')
+	+s-our-work
+	//- +s-history
+	//- +s-progress
+	//- +s-team
+	//- +s-production
+	//- +s-vacancy
+	//- +s-about
+	//- +s-gal
+	//- +s-logos
+	//- +s-rews
+	//- +s-news
+	+footer()

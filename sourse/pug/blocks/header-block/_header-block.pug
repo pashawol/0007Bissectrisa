@@ -53,9 +53,15 @@ mixin header-block-02()
 						p Компания &laquo;Биссектриса&raquo; более 16&nbsp;лет занимается производством, продажей  и&nbsp;установкой окон в&nbsp;Санкт-Петербурге. Накопленный опыт производства,  а&nbsp;также современные производственные линии, оснащенные высокоточным  немецким оборудованием, многоступенчатый контроль качества, позволяют нам  предлагать высококачественные пластиковые и&nbsp;деревянные окна  по&nbsp;максимально конкурентным ценам, свидетельством чему являются  многочисленные положительные отзывы и&nbsp;благодарности наших клиентов.  По&nbsp;мнению многих клиентов мы&nbsp;производим, продаем и&nbsp;устанавливаем лучшие  окна в&nbsp;Санкт-Петербурге.
 						nav
 							ul
-								li: a.scroll-link(href="") История       
-								li: a.scroll-link(href="")  Достижения      
-								li: a.scroll-link(href="")  Команда       
-								li: a.scroll-link(href="")   Производство      
-								li: a.scroll-link(href="") Вакансии
+								li: a.scroll-link(href="#s-history") История       
+								li: a.scroll-link(href="#s-progress")  Достижения      
+								li: a.scroll-link(href="#s-team")  Команда       
+								li: a.scroll-link(href="#s-production")   Производство      
+								li: a.scroll-link(href="#s-vacancy") Вакансии
+	// end header-block
+mixin header-block-body(i)
+	// start header-block
+	+b.header-block--img#header-block
+		.container
+			+pic(i)
 	// end header-block

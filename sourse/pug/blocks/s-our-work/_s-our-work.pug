@@ -1,0 +1,37 @@
+mixin s-our-work()
+	// start s-our-work
+	+b.SECTION.s-our-work.section.lazy-background#s-our-work&attributes(attributes)
+		.container
+			+e.head.row
+				.col-lg-7
+					+b.section-title
+						+e.H2.sm НАШИ РАБОТЫ 
+					.title Подъемные панорамные окна
+					+e.breadcrumb 
+						strong Частный коттедж  
+						|  /Зеленогорск/
+					p Здесь должно быть краткое описание проекта с&nbsp;перечнем объема выполненых  работ и&nbsp;небольшим описанием локации проекта. Также может быть описание  характерных особенностей данного проекта с&nbsp;указанием некоторых цифровых  данных, таких как площадь остекления и&nbsp;сроки исполнения.
+				.col
+					+e.table-wrap
+						mixin tr(t1,t2)
+							+e.table-row
+								+e.table-col--left= t1
+								+e.table-col--right= t2
+						+tr("Локация","г. Зеленогорск")
+						+tr("Объект","Частный коттедж")
+						+tr("Виды работ","Подъемные панорамные окна")
+						+tr("Площадь остекления","300 кв.м.")
+						+tr("Срок исполнения","4 месяца")
+						+tr("Дата окончания","2016 год")
+			+e.row.row
+				- for (var x = 1; x < 7; x++)
+					+e.gal-col.col-4
+						+e.img-wrap--sm.bg-wrap(href=`img/@2x/gal-page-${x}.jpg` data-fancybox="gallery")
+							+pic(`gal-page-${x}.jpg`,'bg','lazy',0)(class="picture-bg")
+				+e.gal-col--last.col-12
+					+e.img-wrap--lg.bg-wrap(href=`img/@2x/gal-page-7.jpg` data-fancybox="gallery")
+						+pic(`gal-page-7.jpg`,'bg','lazy',0)(class="picture-bg")
+				+e.gal-col--text.col-12
+					h4 Вид на северный фасад дома
+					p Здесь может быть некий текст поясняющий, что именно показано на&nbsp;фотографии. Указание на&nbsp;какие-либо нюансы конструкций. Возможно указание поэтапности строительства.
+	// end s-our-work
