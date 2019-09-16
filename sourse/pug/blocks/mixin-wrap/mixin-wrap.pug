@@ -174,11 +174,14 @@ mixin mnu()
 
 
 
-mixin pic( i,exp="jpg", bg, lazy="lazy", media='576px')
+mixin pic( i, bg, lazy="lazy", media='576px')
 	- const smpath2 = "2x"
 	- const smpath1 = "1x"
+	- let expArr = i.split(".")
+	- let exp = expArr[1]
 	mixin src(i, exp, path , lazy, source, bg)
-		-const url= `img/@${path}/${i}.${exp}`
+		
+		-const url= `img/@${path}/${expArr[0]}.${exp}`
 		-const ifLazy = (lazy== "lazy")
 		-const src = ( ifLazy ? "#" : url)
 		-const data = (ifLazy ?  url  : null)

@@ -133,6 +133,23 @@
     } 
   }
    
+
+  &--page{
+    .footer__text{
+      @include rfs(rem(24));
+    }
+    .inner-row{
+      @include roww(26);
+    }
+    @include media-breakpoint-up(xxxl) {
+      .container{
+        max-width: 1700px;
+      }
+    }
+    .footer__nav-block{
+      padding-top: rem(30);
+    }
+  }
 // 
 @include media-breakpoint-up(xl) {}
 

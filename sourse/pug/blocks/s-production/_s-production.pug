@@ -1,0 +1,57 @@
+mixin s-production()
+	// start s-production
+	+b.SECTION.s-production.section.lazy-background#s-production&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col.col-lg-6
+					+e.text-block
+						+b.section-title
+							+e.H2.sm НАШЕ ПРОИЗВОДСТВО
+							+e.lg  ПРОИЗВОДСТВО
+						.title Мы&nbsp;гордимся своим  производством, поэтому  Вы&nbsp;сможете гордиться  своими окнами
+							span.text-primary !
+						p Собственный испытательный центр и&nbsp;многоступенчатый контроль  качества на&nbsp;производстве позволяют нам быть у&nbsp;веренными  в&nbsp;качестве каждого производимого нами изделия. А&nbsp;применяемые  нами передовыми технологии позволят Вам всегда быть уверенными,  что&nbsp;Вы приобретаете современные и&nbsp;высокотехнологичные изделия,  которые прослужат Вам долгие годы.
+				.col-lg-6
+					+e.img-wrap 
+						+pic("production-img.jpg")
+		+e.group.container
+			+e.row.row
+				+e.col-auto.col-xxxl-auto.col-xl-4.col-lg-5
+					+pic("s-production-1.jpg")(class="top-img")
+				.col
+					+e.group-title-sub В&nbsp;2006&nbsp;ГОДУ
+					+e.group-title Компанией открыто собственное производство окон и&nbsp;дверей в&nbsp;СПб.
+					p На&nbsp;заводе запущена первая производственная линия по&nbsp;выпуску оконных и&nbsp;дверных конструкций из&nbsp;ПВХ и&nbsp;алюминия
+						span.text-primary .
+					.row
+						+e.col-7.col-xxl-7
+							+e.p-wrap
+								p 
+									strong В&nbsp;2010 году  
+									| запущена полностью автоматическая линия  по&nbsp;производству стеклопакетов и&nbsp;металлопластиковых  изделий. Rotox (Германия), включающая в&nbsp;себя  оборудование, образующее единую поточную сварочно- зачистную линию для контуров рам и&nbsp;створок:
+						.col
+							ul
+								li автоматическую пилу Rotox ZGS 314
+								li автоматический 4-х головочный сварочный станок  Rotox SMK 504, позволяющий добиться идеальной  геометрии окна
+								li автоматический зачистной станок Rotox EPA 479
+
+		
+		+e.group.container
+			+e.row.row
+				+e.col-auto.col-xxxl-auto.col-xl-4.col-lg-5
+					+pic("s-production-2.jpg",'','lazy',0)(class="bott-img")
+				.col
+					+e.group-title-sub 1 ИЮЛЯ 2010 ГОДА
+					+e.group-title Оконный завод &laquo;Биссектриса&raquo; прошел комплексную аттестацию  на&nbsp;соответствие Технологическому кодексу  
+						| 
+						span.text-primary VEKA Group.
+					.row
+						+e.col-7.col-xxl-7
+							+e.p-wrap
+								p Производственная линия предназначена для переработки  немецкого качественного профиля VEKA. В&nbsp;производстве  используются только экологически чистые материалы,  имеющие все необходимые сертификаты качества.
+								p Новейшее немецкое оборудование от&nbsp;признанного лидера  рынка производителей станков для ПВХ-производств Rotox  (Германия) позволяет нашему производству изготавливать  до&nbsp;6000 высококачественных изделий в&nbsp;месяц!
+						.col
+							a(href=`img/@2x/s-production-3.jpg` data-fancybox="gallery")
+								+pic("s-production-3.jpg",'','lazy',0)
+
+	// end s-production

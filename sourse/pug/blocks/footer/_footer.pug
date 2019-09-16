@@ -18,7 +18,7 @@ mixin footer-main()
 										a(href="tel:(812)648-21-36") (812) 648-21-36
 									+e.text 
 										a(href="mailto:alum@bissectrisa.ru") alum
-											span.text-primary @ 
+											span.text-primary @
 											|bissectrisa.ru
 								.col-sm-auto
 									+soc
@@ -26,6 +26,26 @@ mixin footer-main()
 						+mnu()
 						+e.copy © 2002 — 2019 КОМПАНИЯ БИССЕКТРИСА
 mixin footer()
-	+b.FOOTER.footer.block-with-lazy
+	+b.FOOTER.footer--page.block-with-lazy
 		.container
+			+e.row.row
+				.col-xxl-6.col-lg-5
+					+e.contact-block
+						.row.inner-row
+							.col-xxl-auto
+								+b.section-title
+									+e.sm  АДРЕС ШОУ-РУМА
+							.col
+								+e.text 197229, Санкт-Петербург, Лахтинский проспект, 83, к.&nbsp;2.
+								+e.text 
+									a(href="tel:(812)648-21-36") (812) 648-21-36
+								+e.text 
+									a(href="mailto:alum@bissectrisa.ru") alum
+										span.text-primary @
+										|bissectrisa.ru 
+								+soc
+				.col
+					+e.nav-block
+						+mnu()
+						+e.copy © 2002 — 2019 КОМПАНИЯ БИССЕКТРИСА
 			

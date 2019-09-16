@@ -1,0 +1,103 @@
+.s-progress {
+	@include media-breakpoint-up(xxxl) {
+		padding-top: rem(55);
+	}
+	&__inner{
+		@include media-breakpoint-up(sm) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+		margin-left: -15px;
+		margin-right: -15px;
+		background-color: #f5f5f5;
+		@include media-breakpoint-up(xxl) {
+
+			padding: rem(64)  rem(64) rem(74);
+		}
+		padding: rem(54)  rem(24) rem(44);
+		// margin-top: rem(10);
+	}
+	.title{
+		max-width: rem(670);
+		margin-bottom: rem(50);
+	}
+	ol{
+		counter-reset: num;
+		padding: 0;
+		@include media-breakpoint-up(lg) {
+
+			max-width: rem(535);
+		}
+
+		li{
+			list-style-type: none;
+			line-height: 1.67;
+			&::before {
+				content: counter(num)'. ';
+				counter-increment: num;
+				@extend .h4;
+				display: inline;
+				color: #f30927;
+				letter-spacing: -0.3px;
+				line-height: 1.6;
+			}
+		}
+	}
+	&__row{
+		@include media-breakpoint-up(lg) {
+
+			padding-top: rem(120);
+			// height: 100%;
+		}
+		padding-top: rem(20);
+		align-items: center;
+		@include media-breakpoint-up(xxl) {
+
+			justify-content: space-between;
+		}
+		@include media-breakpoint-up(xxxl) {
+
+			padding-left: rem(50);
+		}
+		// padding-bottom: rem(100);
+		p,
+		.h2{
+			margin-bottom: rem(5);
+		}
+		.h2{
+			letter-spacing: rem(-1.68px);
+		}
+	}
+	&__col{
+		padding-bottom: rem(40);
+		p{
+			max-width: rem(240);
+			line-height: 1.33;
+		}
+	}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

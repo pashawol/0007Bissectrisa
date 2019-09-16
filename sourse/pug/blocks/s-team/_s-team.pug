@@ -1,0 +1,31 @@
+mixin s-team()
+	// start s-team
+	+b.SECTION.s-team.section.lazy-background#s-team&attributes(attributes)
+		.container
+			.row
+				+e.col-left.col-xl-5
+					+e.text-block
+						+b.section-title
+							+e.H2.sm НАША КОМАНДА
+						.title Наш профессионализм&nbsp;&mdash;  это Ваша уверенность  в&nbsp;отличном результате
+							span.text-primary !
+						p Компания &laquo;Биссектриса&raquo;&nbsp;&mdash; это более 250&nbsp;профессионалов,  объединенных идеей предлагать на&nbsp;рынке лучшие  в&nbsp;России пластиковые окна по&nbsp;конкурентным ценам  с&nbsp;высококачественным сервисом в&nbsp;оптимальные сроки.
+				.col
+					+e.row.row
+						mixin item(i)
+							+e.col&attributes(attributes)
+								+e.item
+									+pic('team-'+ i +'.jpg','bg','lazy',0)
+									+e.caption 
+										.fw-500 Ольга Савельева
+										div Начальник гарантийного отдела
+						+item(1)(class="col-md-6")
+						+item(2)(class="col-md-6")
+						+item(3)(class="col-lg-4 col-6")
+						+item(4)(class="col-lg-4 col-6")
+						+item(5)(class="col-lg-4 col-6")
+						+item(6)(class="col-lg-4 col-6")
+						+item(7)(class="col-lg-4 col-6")
+						+item(8)(class="col-lg-4 col-6")
+						
+	// end s-team

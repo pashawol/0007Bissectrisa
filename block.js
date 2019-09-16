@@ -19,9 +19,10 @@ const fileSources = {
 	// start {blockName}
 	+b.SECTION.{blockName}.section.lazy-background#{blockName}&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 {blockName}
-				
+			+b.section-title
+				+e.H2.sm {blockName}
+				+e.lg {blockName}
+			.title {blockName}
 			.row
 	// end {blockName}`,
 	scss: `.{blockName} \{
