@@ -101,7 +101,8 @@ jQuery(document).ready(function ($) {
 		prevArrow: arrr2,
 		nextArrow: arrl2,
 		// autoplay: true,
-		autoplaySpeed: 6000
+		autoplaySpeed: 6000,
+		lazyLoad: 'ondemand',
 	}
 	$('.header-block__slider--js').slick($.extend({
 		slidesToShow: 1,
@@ -171,6 +172,19 @@ jQuery(document).ready(function ($) {
 			}
 
 		}]
+	}, defaultSlide));
+	
+	$('.s-gal-show-room__slider--js').slick($.extend({
+	 	centerMode: true,
+		slidesToShow: 1,
+		arrows: true,
+		dots: true, 
+	}, defaultSlide));
+
+	$('.one-slider--js').slick($.extend({ 
+		slidesToShow: 1,
+		arrows: true,
+		dots: true, 
 	}, defaultSlide));
 
 	if ( $("div").is("#map1")) {

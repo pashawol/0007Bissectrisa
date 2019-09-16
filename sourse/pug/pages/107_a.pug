@@ -1,0 +1,60 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug 
+include ../blocks/s-production/_s-production.pug 
+include ../blocks/s-gal-show-room/_s-gal-show-room.pug 
+include ../blocks/s-video/_s-video.pug 
+//- include ../blocks/s-about/_s-about.pug
+//- include ../blocks/s-gal/_s-gal.pug
+//- include ../blocks/s-logos/_s-logos.pug
+//- include ../blocks/s-rews/_s-rews.pug
+//- include ../blocks/s-news/_s-news.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '107_a'
+	title= title
+
+block pagecontent
+ 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+header-block-107_a()
+
+	//- +s-history
+	//- +s-progress 
+	//- +s-team
+	+s-production-107_a
+	+s-gal-show-room
+	+s-content
+	+s-video
+
+	// start s-content
+	+b.s-content.section.block-with-lazy#s-content&attributes(attributes)
+		.container.container--xxxl
+			.row
+				.col-xl-8
+					+b.section-title
+						+e.H2.sm ЗАМЕР
+					.title Приглашаем Вас посетить наш Шоу-рум
+						span.text-primary .
+					.column-2
+						.fw-500.text-dark Посетите наш шоурум, взгляните на&nbsp;нашу продукцию  и&nbsp;испытайте её&nbsp;в&nbsp;действии. 
+						p Мы&nbsp;будем рады встретиться с&nbsp;Вами в&nbsp;нашем новом шоу-руме!  Здесь представлены только полноценные и&nbsp;работоспособные  изделия различных конструкций и&nbsp;моделей. Вы&nbsp;сможете  детально рассмотреть каждый элемент изделия, потрогать  руками, испытать их&nbsp;в&nbsp;действии. Это поможет Вам легко  сориентироваться в&nbsp;многообразии систем остекления  существующих сегодня, а&nbsp;мы, с&nbsp;удовольствием, ответим  на&nbsp;все интересующие Вас вопросы.
+						p Здесь вы&nbsp;сможете получить максимум информации  о&nbsp;продукции, обсудить Ваш проект, произвести расчет  стоимости заказа, ознакомиться с&nbsp;процессом производства.
+						p В&nbsp;шоу-руме представлены все, предлагаемые нами,  архитектурные системы.
+						.fw-500.text-dark Шоу-рум находится по&nbsp;адресу: Лахтинский проспект,  85, лит. В&nbsp;в&nbsp;торговом комплексе Гарден Plus.
+						h5.text-primary.strong Приходите, мы&nbsp;ждем Вас!
+				.col
+					+pic("Layer_202.jpg")
+	// end s-content
+	//- +s-vacancy
+	//- +s-about
+	//- +s-gal
+	//- +s-logos
+	//- +s-rews
+	//- +s-news
+	+footer()

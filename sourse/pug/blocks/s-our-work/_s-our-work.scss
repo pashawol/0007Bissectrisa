@@ -1,5 +1,9 @@
 .s-our-work {
 		//  padding-top: rem(20);
+		@include bg("project.png");
+		background-repeat: no-repeat;
+		background-size: rem(575);
+		background-position: left rem(-150px);
 	&__img-wrap{
 		z-index: 2;
 		display: block;

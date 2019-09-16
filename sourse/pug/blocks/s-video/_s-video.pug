@@ -1,0 +1,21 @@
+mixin s-video()
+	// start s-video
+	+b.SECTION.s-video.section.lazy-background#s-video&attributes(attributes)
+		.container
+			+e.inner
+				+e.inner-wrapper
+					.row
+						+e.col.col-xxl-auto 
+							h4 Видеообзор  по Шоу-руму Bissectrisa
+
+						+e.slider-wrapper.col
+							+e.slider.one-slider--js
+								- for (var x = 0; x < 3; x++)
+									+e.slide
+										+e.img-wrap.bg-wrap.object-fit-js(href="https://www.youtube.com/watch?v=1NKc5QumWsQ" data-fancybox="video-gallery")
+											picture.picture-bg
+												img.object-fit-js(src="#" data-lazy="https://i.ytimg.com/vi/1NKc5QumWsQ/maxresdefault.jpg", alt="")
+											+e.title Порталы с откидной сдвижной фурнитурой
+											+icon('play')
+						+e.col.col-auto.d-none.d-xxl-block
+	// end s-video

@@ -37,31 +37,46 @@ mixin header-block()
 									img(src="#" data-lazy=`img/@2x/header-slide-${x}.jpg`, alt="")
 			+e.dots-wrap
 	// end header-block
-mixin header-block-02()
+
+mixin header-block-body-left(i, t)
 	// start header-block
 	+b.header-block--page#header-block
 		.container
 			.row.no-gutters
 				+e.img-wrap.col-lg-6
-					+pic("head-02.jpg",'bg','')(class="picture-bg")
+					+pic(i,'bg','')(class="picture-bg")
 				.col-lg-6 
 					+e.text-block
 						+b.section-title
-							+e.H2.sm О КОМПАНИИ
-						.title Наша команда работает, чтобы предлагать Вам наилучшие решения
-							span.text-primary .
-						p Компания &laquo;Биссектриса&raquo; более 16&nbsp;лет занимается производством, продажей  и&nbsp;установкой окон в&nbsp;Санкт-Петербурге. Накопленный опыт производства,  а&nbsp;также современные производственные линии, оснащенные высокоточным  немецким оборудованием, многоступенчатый контроль качества, позволяют нам  предлагать высококачественные пластиковые и&nbsp;деревянные окна  по&nbsp;максимально конкурентным ценам, свидетельством чему являются  многочисленные положительные отзывы и&nbsp;благодарности наших клиентов.  По&nbsp;мнению многих клиентов мы&nbsp;производим, продаем и&nbsp;устанавливаем лучшие  окна в&nbsp;Санкт-Петербурге.
-						nav
-							ul
-								li: a.scroll-link(href="#s-history") История       
-								li: a.scroll-link(href="#s-progress")  Достижения      
-								li: a.scroll-link(href="#s-team")  Команда       
-								li: a.scroll-link(href="#s-production")   Производство      
-								li: a.scroll-link(href="#s-vacancy") Вакансии
+							+e.H2.sm= t
+						block
 	// end header-block
+
+mixin header-block-02()
+	+header-block-body-left("head-02.jpg", 'О КОМПАНИИ') 
+		.title Наша команда работает, чтобы предлагать Вам наилучшие решения
+			span.text-primary .
+		p Компания &laquo;Биссектриса&raquo; более 16&nbsp;лет занимается производством, продажей  и&nbsp;установкой окон в&nbsp;Санкт-Петербурге. Накопленный опыт производства,  а&nbsp;также современные производственные линии, оснащенные высокоточным  немецким оборудованием, многоступенчатый контроль качества, позволяют нам  предлагать высококачественные пластиковые и&nbsp;деревянные окна  по&nbsp;максимально конкурентным ценам, свидетельством чему являются  многочисленные положительные отзывы и&nbsp;благодарности наших клиентов.  По&nbsp;мнению многих клиентов мы&nbsp;производим, продаем и&nbsp;устанавливаем лучшие  окна в&nbsp;Санкт-Петербурге.
+		nav
+			ul
+				li: a.scroll-link(href="#s-history") История       
+				li: a.scroll-link(href="#s-progress")  Достижения      
+				li: a.scroll-link(href="#s-team")  Команда       
+				li: a.scroll-link(href="#s-production")   Производство      
+				li: a.scroll-link(href="#s-vacancy") Вакансии
+	// end header-block
+
 mixin header-block-body(i)
 	// start header-block
 	+b.header-block--img#header-block
 		.container
 			+pic(i)
+	// end header-block
+
+
+mixin header-block-107_a()
+	+header-block-body-left("107_a.jpg", 'ШОУ-РУМ') 
+		.title Широкий ассортимент, представленный в&nbsp;нашем Шоу-руме, вдохновит на смелые архитектурные решения
+			span.text-primary .
+		p Нестандартные конструкции, широко представленные в&nbsp;салоне, вдохновят на&nbsp;смелые архитектурные решения. Заказ примут внимательные менеджеры, способные проконсультировать по&nbsp;всем вопросам на&nbsp;пути к&nbsp;желанному  дизайну. Опытные технологи сотворят любую конструкцию под заказ  и&nbsp;претворят в&nbsp;жизнь мечты каждого архитектора, дизайнера и&nbsp;владельца  загородной недвижимости.
 	// end header-block

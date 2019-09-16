@@ -112,6 +112,9 @@
 
 			margin-top: rem(-180);
 			margin-bottom: rem(-105);
+				&--show-room{
+					margin-bottom: 0;
+				}
 		}
 		margin-bottom: rem(40);
 	}
@@ -176,5 +179,12 @@
 	@include media-breakpoint-down(md) {}
 	@include media-breakpoint-down(sm) {}
 	@include media-breakpoint-down(xs) {} 
+	
+}
 
+.column-2 {
+	@include media-breakpoint-up(lg) {
+
+		columns: 2;
+	}
 }

@@ -272,31 +272,7 @@ letter-spacing: rem(-0.33px);
 				text-transform: uppercase;
 				text-decoration: none !important;
 			}
-			.slick-dots{
-				text-align: center;
-				margin-left: rem(-10);
-				margin-right: rem(-10);
-				margin-bottom: 0;
-				padding-top: rem(13);
-				button{
-					display: none;
-				}
-				li{
-					display: inline-block;
-					width: rem(64);
-					height: rem(6);
-					margin-left: rem(10px);
-					margin-right: rem(10px);
-					background-color: #e7e7e7;
-					cursor: pointer;
-					@include mt;
-					&:hover,
-					&.slick-active{
-						background-color: $primary;
-					}
-
-				}
-			}
+			
 
 			&--img{
 				padding-bottom: 0;
