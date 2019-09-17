@@ -1,8 +1,8 @@
-mixin s-gal-show-room()
+mixin s-gal-show-room(t="В Шоу-руме Bissectrisa представлены все виды оконно-дверных порталов из алюминия")
 	// start s-gal-show-room
 	+b.SECTION.s-gal-show-room.section.lazy-background#s-gal-show-room&attributes(attributes)
 		.container
-			h5 В Шоу-руме Bissectrisa представлены все виды оконно-дверных порталов из алюминия
+			h5= t
 			+e.slider-wrapper
 				+e.slider--js
 					- for (var x = 0; x < 3; x++)
@@ -10,4 +10,10 @@ mixin s-gal-show-room()
 							+e.img-wrap.bg-wrap.object-fit-js
 								picture.picture-bg
 									img.object-fit-js(src="#" data-lazy="img/@2x/Layer_179.jpg", alt="")
+						
+						+e.slide
+							+e.img-wrap.bg-wrap.object-fit-js
+								picture.picture-bg
+									img.object-fit-js(src="#" data-lazy="img/@2x/Layer_166.jpg", alt="")
+						
 	// end s-gal-show-room

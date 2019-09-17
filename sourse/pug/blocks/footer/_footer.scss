@@ -1,4 +1,5 @@
 .footer {
+  
   background-color: #2d2d2d;
   .section-title{
    
@@ -137,6 +138,7 @@
   &--page{
     .footer__text{
       @include rfs(rem(24));
+      max-width: rem(320);
     }
     .inner-row{
       @include roww(26);
@@ -151,7 +153,10 @@
     }
   }
 // 
-@include media-breakpoint-up(xl) {}
+@include media-breakpoint-up(xl) {
+  margin-top: rem(80);
+}
+margin-top: rem(40);
 
 @include media-breakpoint-up(lg) {}
 

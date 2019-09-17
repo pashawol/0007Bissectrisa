@@ -37,6 +37,42 @@
 	 + .footer{
 		 margin-top: rem(60);
 	 }
+
+	 &__inner{
+		 background-color: #f5f5f5;
+		 padding: rem(86) rem(20);
+		 &-wrapper{
+			 margin-left: auto;
+			 margin-right: auto;
+			 max-width: 1640px;
+		 }
+	 }
+
+	 .h6{
+		 line-height: 1.6;
+	 }
+	 .fw-400 {
+		 font-weight: normal;
+	 }
+
+	 ul{
+		list-style-type: none;
+		li{
+			position: relative;
+			padding-left: rem(20);
+			margin-bottom: rem(5);
+			&::before{
+				content: '';
+				width: rem(6);
+				height: rem(6);
+				position: absolute;
+				left: 0;top: rem(12);
+				// color: $primary;
+				background-color: $primary;
+	
+			}
+		}
+	}
 	//
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -68,10 +104,22 @@
 
 		padding-right: rem(88);
 	}
+	
+	@include media-breakpoint-up(xl) {
+
+		padding-right: rem(88  / 2);
+	}
+
 }
 .pl-88{
 	@include media-breakpoint-up(xxl) {
 
 		padding-left: rem(88);
 	}
+	
+	@include media-breakpoint-up(xl) {
+
+		padding-left: rem(88 / 2);
+	}
+
 }

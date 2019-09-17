@@ -1,0 +1,58 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-history/_s-history.pug
+include ../blocks/s-progress/_s-progress.pug
+include ../blocks/s-team/_s-team.pug
+include ../blocks/s-production/_s-production.pug
+include ../blocks/s-vacancy/_s-vacancy.pug 
+//- include ../blocks/s-about/_s-about.pug
+//- include ../blocks/s-gal/_s-gal.pug
+//- include ../blocks/s-logos/_s-logos.pug
+//- include ../blocks/s-rews/_s-rews.pug
+//- include ../blocks/s-news/_s-news.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '110_a'
+	title= title
+
+block pagecontent
+ 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+header-block-110_a()
+
+	// start s-content
+	+b.s-content.section.block-with-lazy#s-content&attributes(attributes)
+		.container.container--xxxl
+			.row
+				.col-xl-8
+					+b.section-title
+						+e.H2.sm ЗАМЕР
+					.title От&nbsp;правильно проведенного замера, зависит качество конечного результата.
+						span.text-primary .
+					.column-2 
+						p От&nbsp;того, насколько правильно произведен замер проема, и&nbsp;спроектированы узлы примыканий, зависит конечный внешний вид и&nbsp;качество работы раздвижных конструкций.
+						p Замеры в&nbsp;нашей компании выполняют штатные высококвалифицированные инженеры, с&nbsp;опытом работы по&nbsp;данному направлению свыше 10&nbsp;лет.
+						p Обязанности инженера&nbsp;&mdash; внимательно ознакомиться с&nbsp;особенностями проекта, учесть Ваши пожелания по внешнему виду помещения и&nbsp;фасада после установки конструкций и&nbsp;отделки, дать рекомендации по&nbsp;подготовке проема, установке скрытых отопительных приборов(конвекторов, системы подогрева пола), предложить оптимальное решение по&nbsp;выбору заполнения(стеклопакета) с&nbsp;учетом особенностей расположенияздания, типа помещения, требований по&nbsp;тепло и шумоизоляции.
+						p Также инженер оценит доступность подъездных путей для доставки и&nbsp;способ подъема крупногабаритных изделий на место установки.
+						p По&nbsp;окончании работ, инженер составит подробный замерный лист и&nbsp;техническое задание на&nbsp;производство конструкций.
+				.col
+					+pic("Layer_137.jpg")
+	// end s-content
+	+s-content
+	//- +s-history
+	//- +s-progress
+	//- +s-team
+	//- +s-production
+	//- +s-vacancy
+	//- +s-about
+	//- +s-gal
+	//- +s-logos
+	//- +s-rews
+	//- +s-news
+	+footer()

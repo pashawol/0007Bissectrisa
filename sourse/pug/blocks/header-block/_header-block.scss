@@ -39,15 +39,15 @@
 				display: flex;
 				@include media-breakpoint-up(sm) {
 
-					justify-content: space-between;
+					// justify-content: space-between;
 				}
 				flex-wrap: wrap;
-				margin-left: -5px;
-				margin-right: -5px;
+				margin-left: -15px;
+				margin-right: -15px;
 			}
 			li{
-				padding-left: 5px;
-				padding-right: 5px;
+				padding-left: 15px;
+				padding-right: 15px;
 				list-style-type: none;
 			}
 			a{
@@ -79,15 +79,19 @@
 		padding-top: rem(72);
 		// @extend .section;
 		padding-bottom: rem(72);
+		.text-wrap{
+
+			@include media-breakpoint-up(xl) {
+				
+				padding-bottom: rem(150);
+			}
+		}
+
 		p{
 			color: #969696;
 			line-height: 1.67;
 			// Text style for "Компания «"
 			letter-spacing: rem(-0.18px);
-			@include media-breakpoint-up(xl) {
-
-				padding-bottom: rem(150);
-			}
 		}
 
 	}
@@ -276,6 +280,16 @@ letter-spacing: rem(-0.33px);
 
 			&--img{
 				padding-bottom: 0;
+			}
+
+
+			.slick-dots{ 
+				li{ 
+					width: rem(64);
+					height: rem(6);
+					margin-left: rem(10px);
+					margin-right: rem(10px);
+				}
 			}
 	// 
 	@include media-breakpoint-up(xl) {}

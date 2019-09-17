@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
 
 	JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Bissectrisa_sayt_104_a.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/Bissectrisa_sayt_109_a.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -139,7 +139,7 @@ jQuery(document).ready(function ($) {
 	$('.s-rews__slider--js').slick($.extend({
 		slidesToShow: 1,
 		arrows: false,
-		responsive: [ {
+		responsive: [{
 			breakpoint: 1200,
 			settings: {
 				slidesToShow: 3,
@@ -150,7 +150,7 @@ jQuery(document).ready(function ($) {
 		}, {
 			breakpoint: 768,
 			settings: {
-				slidesToShow: 2, 
+				slidesToShow: 2,
 			}
 
 		}]
@@ -158,76 +158,83 @@ jQuery(document).ready(function ($) {
 	$('.s-news__slider--js').slick($.extend({
 		slidesToShow: 1,
 		arrows: false,
-		responsive: [ {
+		responsive: [{
 			breakpoint: 1200,
 			settings: {
-				slidesToShow: 2, 
+				slidesToShow: 2,
 				arrows: true,
 			}
 
 		}, {
 			breakpoint: 768,
 			settings: {
-				slidesToShow: 2, 
+				slidesToShow: 2,
 			}
 
 		}]
 	}, defaultSlide));
-	
+
 	$('.s-gal-show-room__slider--js').slick($.extend({
-	 	centerMode: true,
+		responsive: [{
+			breakpoint: 992,
+			settings: {
+				centerMode: true,
+			}
+
+		},],
+
 		slidesToShow: 1,
 		arrows: true,
-		dots: true, 
+		dots: true,
 	}, defaultSlide));
 
-	$('.one-slider--js').slick($.extend({ 
+	$('.one-slider--js').slick($.extend({
 		slidesToShow: 1,
 		arrows: true,
-		dots: true, 
+		dots: true,
 	}, defaultSlide));
 
-	if ( $("div").is("#map1")) {
-		$.getScript('//api-maps.yandex.ru/2.1/?lang=ru_RU', function(){
-				// alert('script loaded');
-			var mark = [59.993243564094826,30.14983249999997];
+	if ($("div").is("#map1")) {
+		$.getScript('//api-maps.yandex.ru/2.1/?lang=ru_RU', function () {
+			// alert('script loaded');
+			var mark = [59.993243564094826, 30.14983249999997];
 			ymaps.ready(function () {
-			var myMap = new ymaps.Map('map1', {
+				var myMap = new ymaps.Map('map1', {
 					center: mark,
 					zoom: 17,
 					behaviors: ['drag'],
-	
+
 					// controls: ["zoomControl", "fullscreenControl"]
 				}, {
 					searchControlProvider: 'yandex#search'
 				}),
-	
-	
-				myPlacemark = new ymaps.Placemark(mark, {
-					hintContent: 'Санкт-Петербург, 	Лахтинский проспект, 83, к. 2.',
-					balloonContent: 'Санкт-Петербург, 	Лахтинский проспект, 83, к. 2.'
-				}, {
-					// Опции.
-					// Необходимо указать данный тип макета.
-					iconLayout: 'default#image',
-					// Своё изображение иконки метки.
-					iconImageHref: $("#map1").data("img"),
-					// Размеры метки.
-					iconImageSize: [87, 87],
-					// Смещение левого верхнего угла иконки относительно
-					// её "ножки" (точки привязки).
-					iconImageOffset: [-42, -95]
-				})
-	
-			myMap.geoObjects
-				.add(myPlacemark)
-	
-	
-	
-		});
-	}); 
 
-}
+
+					myPlacemark = new ymaps.Placemark(mark, {
+						hintContent: 'Санкт-Петербург, 	Лахтинский проспект, 83, к. 2.',
+						balloonContent: 'Санкт-Петербург, 	Лахтинский проспект, 83, к. 2.'
+					}, {
+						// Опции.
+						// Необходимо указать данный тип макета.
+						iconLayout: 'default#image',
+						// Своё изображение иконки метки.
+						iconImageHref: $("#map1").data("img"),
+						// Размеры метки.
+						iconImageSize: [87, 87],
+						// Смещение левого верхнего угла иконки относительно
+						// её "ножки" (точки привязки).
+						iconImageOffset: [-42, -95]
+					})
+
+				myMap.geoObjects
+					.add(myPlacemark)
+
+
+
+			});
+		});
+
+	}
 
 
 	// $('.s-gal__slider\
@@ -327,10 +334,10 @@ JSCCommon = {
 			infobar: false,
 			touch: false,
 			// type : 'inline',
-	});
-	$(".modal-close-js").click(function () {
+		});
+		$(".modal-close-js").click(function () {
 			$.fancybox.close();
-	}) 
+		})
 		// /modal галерея
 	},
 	// /magnificPopupCall

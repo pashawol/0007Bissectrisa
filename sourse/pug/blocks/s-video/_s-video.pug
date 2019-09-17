@@ -1,4 +1,4 @@
-mixin s-video()
+mixin s-video(t="Видеообзор  по Шоу-руму Bissectrisa")
 	// start s-video
 	+b.SECTION.s-video.section.lazy-background#s-video&attributes(attributes)
 		.container
@@ -6,7 +6,7 @@ mixin s-video()
 				+e.inner-wrapper
 					.row
 						+e.col.col-xxl-auto 
-							h4 Видеообзор  по Шоу-руму Bissectrisa
+							h4= t
 
 						+e.slider-wrapper.col
 							+e.slider.one-slider--js
