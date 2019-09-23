@@ -1,0 +1,136 @@
+.s-news-page {
+	.section-title{
+		@include media-breakpoint-up(lg) {
+			text-align: left;
+		}
+		text-align: center;
+	}
+	.title{
+		@include rfs(rem(36));
+		line-height: 1.11;
+// Text style for "Подписывай"
+		letter-spacing: rem(-1.26px);
+		max-width: rem(580);
+		padding-top: rem(30);
+		margin-bottom: 0;
+		padding-bottom: rem(5);
+		@include media-breakpoint-up(lg){
+			margin-left: 0;
+		}
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+	.soc{
+		margin-left: rem(-15px);
+		margin-right: rem(-15);
+		justify-content: center;
+		text-align: center;
+		@include media-breakpoint-up(lg) {
+			padding-top: 0;
+			padding-top: rem(20);
+			padding-bottom: 0;
+		}
+		padding-bottom: rem(20);
+		&__item{
+			margin-left: rem(15px);
+			margin-right: rem(15);
+		}
+		.icon{ 
+      font-size: rem(22px); 
+      &-vk{
+        font-size: rem(15);
+      } 
+    } 
+	}
+		 
+	&__head{
+		text-align: center;
+		font-size: rem(21);
+		font-weight: 500;
+		display: flex;
+		justify-content: center;
+		margin-left: rem(-12);
+		margin-right: rem(-12);
+		padding-bottom: rem(37);
+	}
+	&__head-item{
+		margin-left: rem(12);
+		margin-right: rem(12);
+		margin-bottom: rem(15);
+		a{
+			text-decoration: none !important;
+			color: #afaeae;
+			&:hover,
+			&.active{
+				color: $dark;
+			}
+	
+		}
+	}
+	@include media-breakpoint-up(xxxl) {
+		padding-top: rem(55);
+		.container{
+
+			max-width: 1670px;
+		}
+	}
+	&__row{
+		@include media-breakpoint-up(xxl) {
+
+			@include roww(24);
+		}
+	}
+	&__img-wrap{
+		display: block;
+		@include block(513,308);
+		margin-bottom: rem(40);
+	}
+	&__title{
+		@extend h4;
+		@include media-breakpoint-up(sm) {
+
+			margin-bottom: rem(20);
+		}
+		a{
+			@extend .text-dark;
+			text-decoration: none !important;
+		}
+	}
+	&__date{
+		color: #afaeae;
+		line-height: 1.29;
+		@include media-breakpoint-up(sm) {
+
+			margin-bottom: rem(25);
+		}
+		margin-bottom: rem(12);
+	}
+	&__col{
+		padding-bottom: rem(15);
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(xs) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(xs) {}
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(xs) {} 
+
+}

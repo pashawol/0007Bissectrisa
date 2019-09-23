@@ -182,7 +182,7 @@ mixin pic( i, bg, lazy="lazy", media='576px')
 	- const smpath2 = "2x"
 	- const smpath1 = "1x"
 	- let expArr = i.split(".")
-	- let exp = expArr[1]
+	- let exp = (expArr[1] || 'jpg')
 	mixin src(i, exp, path , lazy, source, bg)
 		
 		-const url= `img/@${path}/${expArr[0]}.${exp}`

@@ -1,16 +1,21 @@
-https://pashawol.github.io/0007Bissectrisa/public/index.html
-https://pashawol.github.io/0007Bissectrisa/public/02-about.html
-https://pashawol.github.io/0007Bissectrisa/public/104_a.html.html
-https://pashawol.github.io/0007Bissectrisa/public/107_a.html.html
-https://pashawol.github.io/0007Bissectrisa/public/109_a.html
-https://pashawol.github.io/0007Bissectrisa/public/109_b.html
-https://pashawol.github.io/0007Bissectrisa/public/109_c.html
-https://pashawol.github.io/0007Bissectrisa/public/109_d.html
-https://pashawol.github.io/0007Bissectrisa/public/109_e.html
-https://pashawol.github.io/0007Bissectrisa/public/109_f.html
-https://pashawol.github.io/0007Bissectrisa/public/109_g.html
-https://pashawol.github.io/0007Bissectrisa/public/109_h.html
-https://pashawol.github.io/0007Bissectrisa/public/109_i.html
-https://pashawol.github.io/0007Bissectrisa/public/109_j.html
-https://pashawol.github.io/0007Bissectrisa/public/110_a.html
+1. https://pashawol.github.io/0007Bissectrisa/public/index.html
+2. https://pashawol.github.io/0007Bissectrisa/public/02-about.html
+3. https://pashawol.github.io/0007Bissectrisa/public/103_a.html
+4. https://pashawol.github.io/0007Bissectrisa/public/104_a.html
+5. https://pashawol.github.io/0007Bissectrisa/public/105_a.html
+6. https://pashawol.github.io/0007Bissectrisa/public/106_a.html
+7. https://pashawol.github.io/0007Bissectrisa/public/107_a.html
+7. https://pashawol.github.io/0007Bissectrisa/public/108_a.html
+8. https://pashawol.github.io/0007Bissectrisa/public/109_a.html
+9. https://pashawol.github.io/0007Bissectrisa/public/109_b.html
+10. https://pashawol.github.io/0007Bissectrisa/public/109_c.html
+11. https://pashawol.github.io/0007Bissectrisa/public/109_d.html
+12. https://pashawol.github.io/0007Bissectrisa/public/109_e.html
+13. https://pashawol.github.io/0007Bissectrisa/public/109_f.html
+14. https://pashawol.github.io/0007Bissectrisa/public/109_g.html
+15. https://pashawol.github.io/0007Bissectrisa/public/109_h.html
+16. https://pashawol.github.io/0007Bissectrisa/public/109_i.html
+17. https://pashawol.github.io/0007Bissectrisa/public/109_j.html
+18. https://pashawol.github.io/0007Bissectrisa/public/110_a.html
+18. https://pashawol.github.io/0007Bissectrisa/public/111_a.html
 

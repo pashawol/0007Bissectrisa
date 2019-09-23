@@ -1,0 +1,24 @@
+mixin s-category()
+	// start s-category
+	+b.SECTION.s-category.section.lazy-background#s-category&attributes(attributes)
+		.container.container--xxxl
+			+b.section-title
+				+e.H1.sm ПРОДУКЦИЯ 
+			.title Для загородных домов.
+		.container
+			+e.row
+				mixin item(i,t)
+					+e.col
+						+pic(`s-category-${i}.jpg`,'bg','lazy',0)
+						+e.DIV.title= t
+				+item("1",'Окна и Двери')
+				+item("2",'Раздвижные порталы')
+				+item("3",'Складные порталы')
+				+item("4",'Витражи')
+				+item("5",'Зимние сады')
+				+item("6",'Безрамное остекление')
+				+item("7",'Подъемные окна')
+				+item("8",'Эксклюзив')
+				+item("9",'Автоматика')
+				+item("10",'Противомоскитные сетки') 
+	// end s-category

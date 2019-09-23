@@ -1,0 +1,124 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-production/_s-production.pug
+
+include ../blocks/s-banner/_s-banner.pug 
+//- include ../blocks/s-about/_s-about.pug
+//- include ../blocks/s-gal/_s-gal.pug
+//- include ../blocks/s-logos/_s-logos.pug
+//- include ../blocks/s-rews/_s-rews.pug
+//- include ../blocks/s-news/_s-news.pug
+block variables
+	- let  mainPage= null
+block title
+	- let  title= '111_a'
+	title= title
+
+block pagecontent
+ 
+	+mob-mnu()
+	+header()
+		+top-line()
+		+top-nav()
+	+header-block-111_a()
+
+	+s-production-111_a
+	// start s-content
+	+b.s-content.section.block-with-lazy#wood&attributes(attributes)
+		.container.container--xxxl 
+			+b.section-title
+				+e.H2.sm ТЕКСТУРА ДЕРЕВА
+
+			.title Неоспоримые преимущества  
+				br
+				| и&nbsp;изысканность текстуры дерева
+				span.text-primary .
+			.row
+				.col
+					+pic("Layer_167_copy.jpg")
+					br
+					.pl-88
+						p Такие двери своим обликом подчеркнут изысканность любого интерьера, одновременно обладая неоспоримыми преимуществами перед деревянными конструкциями&nbsp;&mdash; конструкционной прочностью, легкостью, надежностью, отсутствием деформаций.
+				.col-lg-6
+					p.text-dark.fw-500 Декорирование профиля&nbsp;&mdash; процесс порошковой окраски, который копирует внешний вид натуральных материалов повторяя рисунок и&nbsp;фактуру дерева или камня.
+					.text-center
+						+pic("Layer_167")
+						br
+						br
+						br
+					p Выполняется в&nbsp;две операции&nbsp;&mdash; сначала профиль окрашивается порошковой краской  в&nbsp;нужный базовый цвет, затем по&nbsp;той-же технологии запекания красителя наносится  специальный рисунок&nbsp;&mdash; декор. В&nbsp;итоге формируется прочное, долговечное покрытие,  которому не&nbsp;страшны воздействия внешней среды.
+	// end s-content
+	+s-banner
+	//- +s-content-110_a
+
+	+b.s-content.section.block-with-lazy#handle&attributes(attributes)
+		.container.container--xxxl  
+			.row.row--md
+				.col-xl-8.col-lg-9
+					+b.section-title
+						+e.H2.sm РУЧКИ ОКОННЫЕ
+					.title Ручки&nbsp;&mdash; важнейшие элементы стиля и&nbsp;функциональности окна
+						span.text-priamry :
+					.column-2
+						p Ручки&nbsp;&mdash; важнейшие элементы стиля и&nbsp;функциональности окна. С&nbsp;помощью ручки можно разительно изменить внешний вид окна, придать ему индивидуальность или наоборот сделать более незаметным. БИССЕКТРИСА предлагает своим клиентам большой выбор оконных ручек ведущих мировых производителей. Сделайте свое окно неповторимым!
+						p Чтобы подчеркнуть минималистичный дизайн зданий,  которые часто строят из&nbsp;наших материалов, мы&nbsp;разработали  серию изысканных и&nbsp;элегантных ручек. Эти ручки прекрасно  впишутся в&nbsp;общий образ вашего окна, двери и&nbsp;раздвижной  двери. Они могут быть выполнены в&nbsp;цвете профиля для  идеального соответствия. В&nbsp;дополнение к&nbsp;серии Horizon мы  предлагаем новейшие дизайнерские решения Purity.
+				.col-xl-4.col-lg-3.mb-min
+					+pic("Layer_169",'bg','lazy',0)
+				mixin item(i)
+					+e.img-wrap.col-md-3.col-sm-4.col-6&attributes(attributes) 
+						a(href=`img/@2x/door-handle-${i}.jpg` data-fancybox="gallery1")
+							+pic("door-handle-"+ i,'bg','lazy',0)
+				+item("1")
+				+item("2")(class="offset-right-50")
+				+item("3")
+				+item("4")
+				+item("5")
+				+item("6")
+			
+	+b.s-content.section.block-with-lazy#handle2&attributes(attributes)
+		.container.container--xxxl  
+			+b.section-title
+				+e.H2.sm РУЧКИ ДВЕРНЫЕ
+			.title Совершенный дизайн  и&nbsp;идеальное качество
+				span.text-priamry :
+			.row.row--md
+				.col-xl-6.col-lg-4
+					+pic("Layer_177",'bg','lazy',0)
+					br
+					br
+					.pl-88
+						p Для работы ваших окон, дверей и&nbsp;раздвижных дверей Рейнарс Алюминиум предлагает широкий ассортимент аксессуаров. Они вместе с&nbsp;нашими системами прошли серьезные испытания, чтобы обеспечить максимальную безопасность и&nbsp;надежность.
+						p Ручки, дверные петли, и&nbsp;другие аксессуары тоже окрашиваются в&nbsp;цвет ваших окон и&nbsp;дверей. Даже дренажные колпачки доступны во&nbsp;всех цветах RAL. Выбор в&nbsp;пользу цветных аксессуаров приводит к&nbsp;безупречной интеграции всех аксессуаров в&nbsp;ваши окна.
+						p Для людей, которые стремятся к&nbsp;совершенному дизайну и&nbsp;идеальному качеству, разработана уникальная серия ручек Reynaers под названием Purity. Эта серия сочетает в&nbsp;себе материал нового поколения и&nbsp;механические свойства с&nbsp;изысканными формами итальянского дизайнера Лео Де&nbsp;Карло. Purity&nbsp;&mdash; серия инновационная и&nbsp;особая с&nbsp;точки зрения материала, дизайна и&nbsp;монтажа.
+						p Horizon&nbsp;&mdash; очень модная ручка в&nbsp;ассортименте Reynaers. Элегантный дизайн делает ее&nbsp;идеальной в&nbsp;сочетании с&nbsp;любым типом окон или дверей. Эта ручка отличается горизонтальными деталями, создающими особый эффект. Ручки этой серии могут быть покрашены в&nbsp;цвета палитры 
+							a.tdu.fw-500(href="#") RAL
+							| .
+				.col
+					p.fw-500.text-dark Ручки&nbsp;&mdash; важнейшие элементы стиля и&nbsp;функциональности окна. С&nbsp;помощью ручки можно разительно изменить внешний вид окна, придать ему индивидуальность или наоборот сделать более незаметным. БИССЕКТРИСА предлагает своим клиентам большой выбор оконных ручек ведущих мировых производителей. Сделайте свое окно неповторимым!
+					p Чтобы подчеркнуть минималистичный дизайн зданий, которые часто строят из наших материалов, мы&nbsp;разработали серию изысканных и&nbsp;элегантных ручек. Эти ручки прекрасно впишутся в&nbsp;общий образ вашего окна, двери и&nbsp;раздвижной двери. Они могут быть выполнены в&nbsp;цвете профиля для идеального соответствия. В&nbsp;дополнение к&nbsp;серии Horizon мы&nbsp;предлагаем новейшие дизайнерские решения Purity.
+					br
+					.row
+						mixin item(i)
+							+e.img-wrap.col-6&attributes(attributes) 
+								a(href=`img/@2x/door-handle-2-${i}.jpg` data-fancybox="gallery2")
+									+pic("door-handle-2-"+ i,'bg','lazy',0)
+						+item("1")
+						+item("2")
+						+item("3")
+						+item("4")
+						+item("5")
+						+item("6")
+			
+	//- +s-history
+	//- +s-progress
+	//- +s-team
+	//- +s-production
+	//- +s-vacancy
+	//- +s-about
+	//- +s-gal
+	//- +s-logos
+	//- +s-rews
+	//- +s-news
+	+footer()
