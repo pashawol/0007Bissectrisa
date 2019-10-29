@@ -1,6 +1,6 @@
 module.exports = function (){
 	$.gulp.task('sass', function() {
-	return $.gulp.src('sourse/sass/main.scss')
+	return $.gulp.src($.sourse + '/sass/main.scss')
 	.pipe($.sassGlob())
 	.pipe($.gp.sass().on("error", $.gp.notify.onError()))
 	
@@ -10,10 +10,11 @@ module.exports = function (){
 	.pipe($.gp.autoprefixer({
 
 		grid: true,
-		overrideBrowserslist: ['last 10 versions']
+		overrideBrowserslist: ['last 5 versions']
 	}))
-	.pipe($.cleanCSS())
-	.pipe($.gulp.dest('public/css'))
+	.pipe($.cleanCSS({compatibility: 'ie11'}))
+	.pipe($.tabify(2, true))
+	.pipe($.gulp.dest($.public + '/css'))
 	//.on('end', browserSync.stream());
 	.pipe($.browserSync.stream());
 }); 

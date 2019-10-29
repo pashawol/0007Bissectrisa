@@ -6,19 +6,19 @@ mixin s-product-body(t, n, org)
 				+e.H2.sm ПРОДУКЦИЯ 
 				if !n
 
-					+b.links
-						if !org
-							+e.item
-								a(href="#").active ДЛЯ ЗАГОРОДНЫХ ДОМОВ 
+					//- +b.links
+					//- 	if !org
+					//- 		+e.item
+					//- 			a(href="#").active ДЛЯ ЗАГОРОДНЫХ ДОМОВ 
 							
-							+e.item
-								a(href="#") ДЛЯ ОРГАНИЗАЦИЙ
-						else
-							+e.item
-								a(href="#") ДЛЯ ЗАГОРОДНЫХ ДОМОВ 
+					//- 		+e.item
+					//- 			a(href="#") ДЛЯ ОРГАНИЗАЦИЙ
+					//- 	else
+					//- 		+e.item
+					//- 			a(href="#") ДЛЯ ЗАГОРОДНЫХ ДОМОВ 
 						
-							+e.item
-								a(href="#").active ДЛЯ ОРГАНИЗАЦИЙ
+					//- 		+e.item
+					//- 			a(href="#").active ДЛЯ ОРГАНИЗАЦИЙ
 			.row.row--lg
 				.col-lg-6
 					.title= t

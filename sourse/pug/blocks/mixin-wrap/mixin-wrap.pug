@@ -82,21 +82,21 @@ mixin arrow()
  
 
 //- scial buttons
-mixin soc()
+mixin soc(t)
 	+b.soc
 		mixin item()
-			+e.A.item(href="#" target="_blank")
+			+e.A.item(href="#" target="_blank")&attributes(attributes)
 				block
-		+item()
+		+item()(class=(t=="t" ? 'd-none d-sm-block' : ''))
 			+icon('vk')
 		
-		+item()
+		+item()(class=(t=="t" ? 'd-none d-sm-block' : ''))
 			+icon('fb')
 		
 		+item()
 			+icon('inst')
 		
-		+item()
+		+item()(class=(t=="t" ? 'd-none d-sm-block' : ''))
 			+icon('whatsapp')
 		
 //- /scial buttons

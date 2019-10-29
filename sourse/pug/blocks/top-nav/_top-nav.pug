@@ -18,7 +18,7 @@ mixin top-nav()
 				.col-xxl-auto.col-xl.col-auto
 					.top-nav__nav-toggle(class="toggle-menu-mobile--js")
 						+e.nav-toggle-gum
-							img.res-i(src="img/svg/Bissectrisa_Icon_02.svg", alt="")
+							img.res-i.d-none.d-sm-inline(src="img/svg/Bissectrisa_Icon_02.svg", alt="")
 						//- +icon("chevron-down")
 						+mnu()
 				.col-xl-auto.col.order-xl-first
@@ -36,21 +36,24 @@ mixin top-nav()
 							+e.nav-link(href="#") ШОУ-РУМ
 
 
-				.col-auto.d-none.d-sm-block
+				.col-auto.d-none.d-xl-block
 					+e.link.link-modal(href="#modal-calc")
 						img.res-i(src="img/svg/calculator.svg", alt="") 
 						| ПОЛУЧИТЬ РАСЧЕТ
 				
-				.col-auto.d-none.d-sm-block
+				.col-auto.d-none.d-xl-block
 					+e.link.link-modal(href="#modal-measure")
 						img.res-i(src="img/svg/order.svg", alt="")
 						| ЗАЯВКА НА&nbsp;ЗАМЕР
-				.col-auto.d-none.d-lg-block
-					+e.btn.link-modal(href="#modal-call") ОБРАТНЫЙ ЗВОНОК
-				.col-auto.d-none.d-xl-block
+				.col-auto
+					+e.btn.link-modal(href="#modal-call")
+
+						+icon("email")
+						.d-none.d-lg-inline ОБРАТНЫЙ ЗВОНОК
+				+e.tel-col.col-auto
 					+e.tel(href="tel:(812)648-21-36") 
 						+icon("tel")
-						| (812) 648-21-36
-				.col-auto.d-none.d-xl-block
-					+soc()
+						.d-none.d-md-inline (812) 648-21-36
+				.col-auto
+					+soc("t")
 	// end top-nav

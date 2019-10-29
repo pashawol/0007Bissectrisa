@@ -1,6 +1,7 @@
 .top-nav {
 	position: relative;
 	z-index: 100;
+	border-bottom: 1px solid #f7f7f7;
 	&__logo{
 		display: inline-block;
 		img{
@@ -74,8 +75,20 @@
 		// display: inline-flex;
 		// align-items: center;
 		.icon{
-			font-size: rem(12);
-			margin-right: rem(12);
+			font-size: rem(16);
+			@include media-breakpoint-up(md) {
+				font-size: rem(12);
+
+
+				margin-right: rem(12);
+			}
+			// margin-right: -5px;
+		}
+	}
+	&__tel-col{
+		@include media-breakpoint-down(sm) {
+			padding-left: 0;
+			padding-right: 0;
 		}
 	}
 	&__row{
@@ -83,7 +96,11 @@
 	}
 	&__nav-toggle{
 		position: relative;
-		padding: rem(25) 0;
+		@include media-breakpoint-up(md) {
+
+			padding: rem(25) 0;
+		}
+		padding: rem(15) 0;
 		&:hover{
 			@include media-breakpoint-up(xxl) {
 
@@ -120,6 +137,23 @@
 		@extend .btn-sm;
 		@extend .btn-outline-primary;
 		width: rem(152);
+		.icon{
+			display: none;
+			font-size: rem(21);
+			color: #2d2d2d!important;
+		}
+		@include media-breakpoint-down(md) {
+			width: inherit;
+			.icon{
+				display: block;
+			}
+			border: none !important;
+			padding: 0 !important;
+			background: none !important;
+			outline: none !important;
+			box-shadow: none !important;
+
+		}
 	}
 	// 
 	@include media-breakpoint-up(xl) {}
@@ -153,9 +187,17 @@
 
 	@include media-breakpoint-down(md) {}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-down(sm) {
+		.soc__item {
+			color: #2d2d2d!important;
+		}
+	}
 
-	@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-down(xs) {
+		.row{
+			@include roww(5);
+		}
+	}
 }
 
 .main-nav{

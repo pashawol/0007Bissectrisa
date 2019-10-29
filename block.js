@@ -17,12 +17,11 @@ const BLOCKS_DIR = path.join(__dirname, 'sourse/pug/blocks');
 const fileSources = {
 	pug: `mixin {blockName}()
 	// start {blockName}
-	+b.SECTION.{blockName}.section.lazy-background#{blockName}&attributes(attributes)
+	+b.SECTION.{blockName}.section#{blockName}&attributes(attributes)
 		.container
-			+b.section-title
-				+e.H2.sm {blockName}
-				+e.lg {blockName}
-			.title {blockName}
+			+b.section-title.text-center
+				h2 {blockName}
+				
 			.row
 	// end {blockName}`,
 	scss: `.{blockName} \{
@@ -53,7 +52,11 @@ const fileSources = {
 
 }`
 	,
-	// js	: `// .{blockName} scripts goes here`
+	js: `JSCCommon{blockName}();
+	{blockName}() {
+
+	}
+	`
 };
 
 function validateBlockName(blockName) {
